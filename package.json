@@ -21,5 +21,14 @@
   "bugs": {
     "url": "https://github.com/jameskmonger/64-bit-string-hash/issues"
   },
-  "homepage": "https://github.com/jameskmonger/64-bit-string-hash#readme"
+  "homepage": "https://github.com/jameskmonger/64-bit-string-hash#readme",
+  "devDependencies": {
+    "@types/node": "^8.10.20",
+    "alsatian": "^2.2.1",
+    "typescript": "^2.9.2"
+  },
+  "dependencies": {
+    "@types/long": "^4.0.0",
+    "long": "^4.0.0"
+  }
 }
