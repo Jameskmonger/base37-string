@@ -15,6 +15,16 @@ export class HashTests {
         Expect(output.equals(expected)).toBe(true);
     }
 
+    @TestCase("abc123", "ABC123")
+    @TestCase("jameskmonger", "JAMESKMONGER")
+    @TestCase("81XcJfOoOii", "81XCJFOOOII")
+    public shouldHashCaseInsensitively(a: string, b: string) {
+        const outputA = hash(a);
+        const outputB = hash(b);
+
+        Expect(outputA.equals(outputB)).toBe(true);
+    }
+
     @TestCase(new Long(0x017FB1F7, 0x00000000), "Mopar")
     @TestCase(new Long(0x045E3859, 0x00000000), "abc123")
     @TestCase(new Long(0x8C92749B, 0x18C80EF5), "jameskmonger")
