@@ -1,0 +1,25 @@
+{
+  "name": "64-bit-string-hash",
+  "version": "1.0.0",
+  "description": "Hash a string into a 64-bit number",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc && alsatian test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jameskmonger/64-bit-string-hash.git"
+  },
+  "keywords": [
+    "hash",
+    "string",
+    "64bit",
+    "long"
+  ],
+  "author": "James Monger <jameskmonger@hotmail.co.uk> (http://jamesmonger.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jameskmonger/64-bit-string-hash/issues"
+  },
+  "homepage": "https://github.com/jameskmonger/64-bit-string-hash#readme"
+}
