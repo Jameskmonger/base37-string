@@ -1,17 +1,17 @@
-# 64-bit-string-hash
+# stringhash-int64
 
 Hash a string into a 64-bit number
 
 ## Installation
 
 ```
-npm install 64-bit-string-hash --save
+npm install stringhash-int64 --save
 ```
 
 ## Usage
 
 ```
-import { hash, unhash } from "64-bit-string-hash";
+import { hash, unhash } from "stringhash-int64";
 
 const hashed = hash("james"); // 0x00000000011F0598
 const unhashed = unhash(hashed); // james

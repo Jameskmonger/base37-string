@@ -1,5 +1,5 @@
 {
-  "name": "64-bit-string-hash",
+  "name": "stringhash-int64",
   "version": "1.0.0",
   "description": "Hash a string into a 64-bit number",
   "main": "index.js",
@@ -13,7 +13,7 @@
   "typings": "/build/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jameskmonger/64-bit-string-hash.git"
+    "url": "git+https://github.com/jameskmonger/stringhash-int64.git"
   },
   "keywords": [
     "hash",
@@ -24,9 +24,9 @@
   "author": "James Monger <jameskmonger@hotmail.co.uk> (http://jamesmonger.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jameskmonger/64-bit-string-hash/issues"
+    "url": "https://github.com/jameskmonger/stringhash-int64/issues"
   },
-  "homepage": "https://github.com/jameskmonger/64-bit-string-hash#readme",
+  "homepage": "https://github.com/jameskmonger/stringhash-int64#readme",
   "devDependencies": {
     "@types/node": "^8.10.20",
     "alsatian": "^2.2.1",
