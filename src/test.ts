@@ -1,6 +1,6 @@
 import { TestFixture, TestCase, Expect } from "alsatian";
 import * as Long from "long";
-import { hash, unhash } from "./index";
+import { hash, unhash, MAX_HASH_VALUE } from "./index";
 
 @TestFixture()
 export class HashTests {
@@ -33,6 +33,16 @@ export class HashTests {
         const output = unhash(input);
 
         Expect(output).toEqual(expected);
+    }
+
+    @TestCase(MAX_HASH_VALUE.add(1))
+    @TestCase(Long.fromInt(0))
+    @TestCase(Long.fromInt(-1))
+    @TestCase(Long.fromInt(37))
+    @TestCase(Long.fromInt(37).multiply(10))
+    public shouldThrowErrorIfUnhashingBadValue(input: Long) {
+        Expect(() => unhash(input))
+            .toThrowError(Error, "Invalid input provided");
     }
 
 }

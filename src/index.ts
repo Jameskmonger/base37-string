@@ -57,6 +57,8 @@ const unhash = (input: Long) => {
 };
 
 export {
+    MAX_HASH_VALUE,
+    
     hash,
     unhash
 };
