@@ -25,10 +25,10 @@ export class HashTests {
         Expect(outputA.equals(outputB)).toBe(true);
     }
 
-    @TestCase(new Long(0x017FB1F7, 0x00000000), "Mopar")
+    @TestCase(new Long(0x017FB1F7, 0x00000000), "mopar")
     @TestCase(new Long(0x045E3859, 0x00000000), "abc123")
     @TestCase(new Long(0x8C92749B, 0x18C80EF5), "jameskmonger")
-    @TestCase(new Long(0xA719992A, 0x004CA64A), "Mopar")
+    @TestCase(new Long(0xA719992A, 0x004CA64A), "dr_munjuice")
     public shouldUnhashCorrectly(input: Long, expected: string) {
         const output = unhash(input);
 
