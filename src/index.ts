@@ -1,5 +1,13 @@
 import * as Long from "long";
 
+const CHARACTERS = [
+    '_', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+    'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6',
+    '7', '8', '9'
+];
+
+const MAX_HASH_VALUE = new Long(0xa98a5dd1, 0x5b5b57f8);
+
 const hash = (input: string) => {
     let output = input
         .split("")
@@ -25,7 +33,27 @@ const hash = (input: string) => {
 };
 
 const unhash = (input: Long) => {
-    return "";
+    if (
+        input.lessThanOrEqual(0)
+        || input.greaterThanOrEqual(MAX_HASH_VALUE)
+        || input.mod(37).equals(0)
+    ) {
+        throw Error("Invalid input provided");        
+    }
+
+    const characters = [];
+    let remainingHash = input;
+
+    while (remainingHash.notEquals(0)) {
+        const n = remainingHash;
+        remainingHash = remainingHash.divide(37);
+
+        const index = n.subtract(remainingHash.multiply(37)).toInt();
+
+        characters.unshift(CHARACTERS[index]);
+    }
+
+    return characters.join("");
 };
 
 export {
