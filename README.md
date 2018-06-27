@@ -1,25 +1,25 @@
-# stringhash-int64
+# base37-string
 
-Hash a string into a 64-bit number
+Encode a string into a base-37 64-bit number
 
 ## Installation
 
 ```
-npm install stringhash-int64 --save
+npm install base37-string --save
 ```
 
 ## Usage
 
 ```
-import { hash, unhash } from "stringhash-int64";
+import { encode, decode } from "base37-string";
 
-const hashed = hash("james"); // 0x00000000011F0598
-const unhashed = unhash(hashed); // james
+const encoded = encode("james"); // 0x00000000011F0598
+const decoded = decode(encoded); // james
 ```
 
 ## Algorithm
 
-### `hash`
+### `encode`
 
 1. Take a string `x`
 2. Convert `x` into an array of character codes `c[]`
@@ -32,7 +32,7 @@ const unhashed = unhash(hashed); // james
 6. While `acc` is not `0` and is evenly divisible by `37`, divide by `37`
 7. Return `acc`
 
-### `unhash`
+### `decode`
 
 1. Take a long `x` which must not:
     - be `<= 0`

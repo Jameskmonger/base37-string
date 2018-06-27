@@ -6,9 +6,9 @@ const CHARACTERS = [
     '7', '8', '9'
 ];
 
-const MAX_HASH_VALUE = new Long(0xa98a5dd1, 0x5b5b57f8);
+const MAX_ENCODED_VALUE = new Long(0xa98a5dd1, 0x5b5b57f8);
 
-const hash = (input: string) => {
+const encode = (input: string) => {
     let output = input
         .split("")
         .map(character => character.charCodeAt(0))
@@ -32,23 +32,23 @@ const hash = (input: string) => {
     return output;
 };
 
-const unhash = (input: Long) => {
+const decode = (input: Long) => {
     if (
         input.lessThanOrEqual(0)
-        || input.greaterThanOrEqual(MAX_HASH_VALUE)
+        || input.greaterThanOrEqual(MAX_ENCODED_VALUE)
         || input.mod(37).equals(0)
     ) {
         throw Error("Invalid input provided");        
     }
 
     const characters = [];
-    let remainingHash = input;
+    let remaining = input;
 
-    while (remainingHash.notEquals(0)) {
-        const n = remainingHash;
-        remainingHash = remainingHash.divide(37);
+    while (remaining.notEquals(0)) {
+        const n = remaining;
+        remaining = remaining.divide(37);
 
-        const index = n.subtract(remainingHash.multiply(37)).toInt();
+        const index = n.subtract(remaining.multiply(37)).toInt();
 
         characters.unshift(CHARACTERS[index]);
     }
@@ -57,8 +57,8 @@ const unhash = (input: Long) => {
 };
 
 export {
-    MAX_HASH_VALUE,
+    MAX_ENCODED_VALUE,
     
-    hash,
-    unhash
+    encode,
+    decode
 };

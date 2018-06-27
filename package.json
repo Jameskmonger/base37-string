@@ -1,7 +1,7 @@
 {
-  "name": "stringhash-int64",
+  "name": "base37-string",
   "version": "1.0.0",
-  "description": "Hash a string into a 64-bit number",
+  "description": "Encode a string into a base-37 64-bit number",
   "main": "index.js",
   "scripts": {
     "prepublishOnly": "tsc",
@@ -13,10 +13,13 @@
   "typings": "/build/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jameskmonger/stringhash-int64.git"
+    "url": "git+https://github.com/jameskmonger/base37-string.git"
   },
   "keywords": [
-    "hash",
+    "encode",
+    "base37",
+    "decode",
+    "encoding",
     "string",
     "64bit",
     "long"
@@ -24,9 +27,9 @@
   "author": "James Monger <jameskmonger@hotmail.co.uk> (http://jamesmonger.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jameskmonger/stringhash-int64/issues"
+    "url": "https://github.com/jameskmonger/base37-string/issues"
   },
-  "homepage": "https://github.com/jameskmonger/stringhash-int64#readme",
+  "homepage": "https://github.com/jameskmonger/base37-string#readme",
   "devDependencies": {
     "@types/node": "^8.10.20",
     "alsatian": "^2.2.1",
