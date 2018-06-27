@@ -4,8 +4,13 @@
   "description": "Hash a string into a 64-bit number",
   "main": "index.js",
   "scripts": {
+    "prepublishOnly": "tsc",
     "test": "tsc && alsatian build/test.js"
   },
+  "files": [
+    "/build/"
+  ],
+  "typings": "/build/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jameskmonger/64-bit-string-hash.git"
