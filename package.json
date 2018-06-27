@@ -1,6 +1,6 @@
 {
   "name": "base37-string",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Encode a string into a base-37 64-bit number",
   "main": "index.js",
   "scripts": {
@@ -8,9 +8,10 @@
     "test": "tsc && alsatian build/test.js"
   },
   "files": [
-    "/build/"
+    "build/index.d.ts",
+    "build/index.js"
   ],
-  "typings": "/build/index.d.ts",
+  "typings": "build/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jameskmonger/base37-string.git"
