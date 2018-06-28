@@ -1,8 +1,8 @@
 {
   "name": "base37-string",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Encode a string into a base-37 64-bit number",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
     "prepublishOnly": "tsc",
     "test": "tsc && alsatian build/test.js"
